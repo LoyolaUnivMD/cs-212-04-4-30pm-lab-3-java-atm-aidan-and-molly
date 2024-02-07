@@ -1,1 +1,35 @@
+1. Ask user for name
+2. Greet user with name
+3. Set balance value
+4. Get user input for action
+5. Error checking method:
+    a. while action not equal to "deposit" or "withdraw" or "check balance" or "leave"
+        i. Output error message and ask for input again
+    b. return action
+
+6. Main method:
+    a. While action is not equal to "leave":
+        i. If action is equal to "deposit":
+            1. Ask for amountDeposited
+            2. If amountDeposited if less than zero:
+                a. Output error message
+            3.Else:
+                a. Add currentBalance with amountDeposited
+        ii. Otherwise if action is equal to "withdraw":
+            1. Ask for amountWithdraw
+            2. If amountWithdraw is greater than currentBalance:
+                a. Output error message
+            3. Else:
+                a. Subtract amountWithdraw from
+        iii. Otherwise if action is equal to "balance":
+            1. output currentBalance
+        iv. Call Error checking method
+    b. Ask user if they'd like a receipt printed or emailed
+    c. Display currentBalance
+    d. If receiptChoice is equal to "printed":
+        i. Output to take receipt
+    e. Otherwise if receiptChoice is equal to "email":
+        i. Output to check email
+
+
 
