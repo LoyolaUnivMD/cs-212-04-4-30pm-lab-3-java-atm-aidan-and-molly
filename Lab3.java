@@ -65,23 +65,58 @@ class Lab3 {
 //        a. Output error message
 //        3.Else:
 //        a. Add currentBalance with amountDeposited
+
+
 //        ii. Otherwise if action is equal to "withdraw":
+            else if (Objects.equals(action, "withdraw")) {
 //        1. Ask for amountWithdraw
+                System.out.println("How much would you like to withdraw?");
+                double amountWithdraw = input.nextDouble();
 //        2. If amountWithdraw is greater than currentBalance:
+                if (amountWithdraw > currentBalance) {
 //        a. Output error message
-//        3. Else:
-//        a. Subtract amountWithdraw from
+                    System.out.println("Invalid amount, must be less than your current balance");
+                }
+                //Else:
+                else{
+                    //Subtract withdraw amount from current balance
+                    currentBalance = currentBalance - amountWithdraw;
+                }
+            }
 //        iii. Otherwise if action is equal to "balance":
-//        1. output currentBalance
+            else if (Objects.equals(action, "balance")) {
+                // 1. output currentBalance
+                System.out.println(currentBalance);
+            }
+            //Ask for user input again
+            System.out.println("Please choose an action");
+            action = input.next();
+
 //        iv. Call Error checking method
-        }
+            action = errorCheck(action);
+
+        } // end of while loop
+
 //        b. Ask user if they'd like a receipt printed or emailed
+        System.out.println("Would you like your receipt printed or emailed?");
+        String receiptChoice = input.next();
 //        c. Display currentBalance
+        System.out.println(currentBalance);
 //        d. If receiptChoice is equal to "printed":
-//        i. Output to take receipt
-//        e. Otherwise if receiptChoice is equal to "email":
-//        i. Output to check email
+        if (Objects.equals(receiptChoice, "receipt")) {
+          //  i. Output to take receipt
+            System.out.println("Please take your receipt and have a nice day!");
+        }
+        //        e. Otherwise if receiptChoice is equal to "email":
+        else if (Objects.equals(receiptChoice, "email")) {
+            //        i. Output to check email
+        System.out.println("Check your email for your receipt and have a nice day!");
+        }
+
+
 
 
     }
 }
+//Decimal format
+//Make another method to check if digit
