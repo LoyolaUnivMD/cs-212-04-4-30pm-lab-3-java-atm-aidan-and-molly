@@ -8,11 +8,79 @@
 // Credits: [Is your code based on an example in the book, in class, or something else?
 //            Reminder: you should never take code from the Internet or another person
 
+import java.util.Objects;
 import java.util.Scanner;
-
+import java.lang.Object;
+import java.lang.String;
 class Lab3 {
+
+    //5. Error checking method:
+    public static String errorCheck(String choice){
+        Scanner input = new Scanner(System.in);
+        choice = choice.toLowerCase();
+
+        while(!Objects.equals(choice,"deposit") && !Objects.equals(choice,"check balance") && !Objects.equals(choice,"withdraw") && !Objects.equals(choice,"leave")){
+            System.out.println("Invalid Choice");
+            System.out.println("What would you like to do?");
+            choice = input.next();
+    }
+        return choice;
+    }
+    //        a. while action not equal to "deposit" or "withdraw" or "check balance" or "leave"
+//        i. Output error message and ask for input again
+//        b. return action
     public static void main(String[] args) {
-       System.out.println("Welcome to Lab 3");
+        Scanner input = new Scanner(System.in);
+//        1. Ask user for name
+        System.out.println("What is your name?");
+        String name = input.next();
+//        2. Greet user with name
+        System.out.println("");
+//        3. Set balance value
+        double currentBalance = 212.90;
+//        4. Get user input for action
+        System.out.println("What would you like to do?");
+        String action;
+        action = input.next();
+//        6. Main method:
+//        a. While action is not equal to "leave":
+        action = errorCheck(action);
+        System.out.println(action);
+        while(!Objects.equals(action,"leave") ) {
+
+
+//        i. If action is equal to "deposit":
+            if(Objects.equals(action, "deposit")){
+                System.out.println("How much would you like to deposit?");
+                double amountDeposited = input.nextInt();
+                if (amountDeposited < 0){
+                    System.out.println("Cannot deposit less than 0");
+                }
+                else{
+                    currentBalance+=amountDeposited;
+                }
+            }
+//        1. Ask for amountDeposited
+//        2. If amountDeposited if less than zero:
+//        a. Output error message
+//        3.Else:
+//        a. Add currentBalance with amountDeposited
+//        ii. Otherwise if action is equal to "withdraw":
+//        1. Ask for amountWithdraw
+//        2. If amountWithdraw is greater than currentBalance:
+//        a. Output error message
+//        3. Else:
+//        a. Subtract amountWithdraw from
+//        iii. Otherwise if action is equal to "balance":
+//        1. output currentBalance
+//        iv. Call Error checking method
+        }
+//        b. Ask user if they'd like a receipt printed or emailed
+//        c. Display currentBalance
+//        d. If receiptChoice is equal to "printed":
+//        i. Output to take receipt
+//        e. Otherwise if receiptChoice is equal to "email":
+//        i. Output to check email
 
 
     }
