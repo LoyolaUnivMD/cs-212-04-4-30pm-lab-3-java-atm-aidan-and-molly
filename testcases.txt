@@ -1,0 +1,6 @@
+Input:                             Output:
+Aidan, balance, leave, printed     "welcome aidan", 212.90, "please take your reciept and have a nice day"
+molly, withdraw, 100, leave, emailde, "welcome molly", "Check your email for your reciept"
+aidan, deposit, 10, balance, leave, printed      "Welcome aidan", 222.90, "PLease take your reciept..."
+molly, balance, leave, emailed       "WElcome molly", 212.90, "Check your email for your reciept"
+Aidan, deposit, 10, withdraw 11, balance, leave, printed,    "Welcome aidan", 211.90, "Please take your reciept..."
