@@ -1,12 +1,11 @@
 // Programmers:  [your names here]
 // Course:  CS 212
-// Due Date:
-// Lab Assignment:
-// Problem Statement:
-// Data In:
-// Data Out:
-// Credits: [Is your code based on an example in the book, in class, or something else?
-//            Reminder: you should never take code from the Internet or another person
+// Due Date: 2/11/24
+// Lab Assignment: Code an ATM
+// Problem Statement: Allow the user to deposit and withdraw any amount and output their balance
+// Data In: Choice of action, type of receipt
+// Data Out: Balance, goodbye message
+// Credits: None
 
 import java.util.Objects;
 import java.util.Scanner;
