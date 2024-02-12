@@ -1,12 +1,11 @@
-// Programmers:  [your names here]
+// Programmers:  Aidan & Molly
 // Course:  CS 212
-// Due Date:
-// Lab Assignment:
-// Problem Statement:
-// Data In:
-// Data Out:
-// Credits: [Is your code based on an example in the book, in class, or something else?
-//            Reminder: you should never take code from the Internet or another person
+// Due Date: 2/11/2024
+// Lab Assignment: 3
+// Problem Statement: simulate an atm where the user can choose what to do from options
+// Data In: choice for what to do
+// Data Out: prompts for user, balance of atm
+// Credits: NA
 
 import java.util.Objects;
 import java.util.Scanner;
@@ -19,7 +18,7 @@ class Lab3 {
         Scanner input = new Scanner(System.in);
         choice = choice.toLowerCase();
 
-        while(!Objects.equals(choice,"deposit") && !Objects.equals(choice,"check balance") && !Objects.equals(choice,"withdraw") && !Objects.equals(choice,"leave")){
+        while(!Objects.equals(choice,"deposit") && !Objects.equals(choice,"balance") && !Objects.equals(choice,"withdraw") && !Objects.equals(choice,"leave")){
             System.out.println("Invalid Choice");
             System.out.println("What would you like to do?");
             choice = input.next();
@@ -35,7 +34,7 @@ class Lab3 {
         System.out.println("What is your name?");
         String name = input.next();
 //        2. Greet user with name
-        System.out.println("");
+        System.out.println("Welcome "+name+" to the ATM simulator. You can make a deposit, type balance to check your balance, or withdraw. Type leave to exit the simulation.");
 //        3. Set balance value
         double currentBalance = 212.90;
 //        4. Get user input for action
@@ -89,7 +88,7 @@ class Lab3 {
                 System.out.println(currentBalance);
             }
             //Ask for user input again
-            System.out.println("Please choose an action");
+            System.out.println("Choose a new action:");
             action = input.next();
 
 //        iv. Call Error checking method
@@ -103,12 +102,12 @@ class Lab3 {
 //        c. Display currentBalance
         System.out.println(currentBalance);
 //        d. If receiptChoice is equal to "printed":
-        if (Objects.equals(receiptChoice, "receipt")) {
+        if (Objects.equals(receiptChoice, "printed")) {
           //  i. Output to take receipt
             System.out.println("Please take your receipt and have a nice day!");
         }
         //        e. Otherwise if receiptChoice is equal to "email":
-        else if (Objects.equals(receiptChoice, "email")) {
+        else if (Objects.equals(receiptChoice, "emailed")) {
             //        i. Output to check email
         System.out.println("Check your email for your receipt and have a nice day!");
         }
