@@ -1,4 +1,4 @@
-// Programmers:  [your names here]
+// Programmers:  Molly Kyle and Aidan
 // Course:  CS 212
 // Due Date: 2/11/24
 // Lab Assignment: Code an ATM
