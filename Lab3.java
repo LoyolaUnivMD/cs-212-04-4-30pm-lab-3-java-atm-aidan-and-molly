@@ -12,7 +12,7 @@ import java.util.Scanner;
 import java.lang.Object;
 import java.lang.String;
 
-import static java.lang.Character.isDigit;
+
 
 class Lab3 {
 
